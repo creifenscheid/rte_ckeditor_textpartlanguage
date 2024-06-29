@@ -1,11 +1,20 @@
-## TYPO3 Extension "dummy-extension"
+## TYPO3 Extension `cke_textpartlanguage`
 
-## Features
-- ...
+## Purpose
+
+This extension implements the [CKEditor 5 text part language feature](https://ckeditor.com/docs/ckeditor5/latest/api/language.html) into the TYPO3 RTE. 
+
+## Usage
+
+…
+
+### Configuration
+
+…
 
 ## Installation
 
-Install this extension via `composer req creifenscheid/dummy-extension` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/dummy_extension/) and activate
+Install this extension via `composer req creifenscheid/cke-textpartlanguage` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/cke_textpartlanguage/) and activate
 the extension in the Extension Manager of your TYPO3 installation.
 
 ### Support

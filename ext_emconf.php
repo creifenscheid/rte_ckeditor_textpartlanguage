@@ -4,7 +4,7 @@
  *
  *  Copyright notice
  *
- *  (c) 2023 Christian Reifenscheid
+ *  (c) 2024 Christian Reifenscheid
  *
  *  All rights reserved
  *
@@ -26,21 +26,16 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'DummyExtension',
-    'description' => 'DummyExtension',
-    'category' => 'fe',
+    'title' => 'CKE Textpart language',
+    'description' => 'This extension implements the text part language feature for CKEditor 5.',
+    'category' => 'be',
     'author' => 'Christian Reifenscheid',
     'version' => '12.0.0',
     'state' => 'alpha',
     'constraints' => [
         'depends' => [
-            'php' => '8.2.0-8.2.99',
-            'typo3' => '12.4.0-12.4.99'
-        ]
+            'typo3' => '12.4.0-12.4.99',
+            'rte_ckeditor' => '12.4.0-12.4.99',
+        ],
     ],
-    'autoload' => [
-        'psr-4' => [
-            'CReifenscheid\\DummyExtension\\' => 'Classes'
-        ]
-    ]
 ];
