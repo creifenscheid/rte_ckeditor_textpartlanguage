@@ -1,0 +1,20 @@
+plugin.tx_dummyextension {
+    view {
+        # cat=plugin.tx_dummyextension/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:dummy_extension/Resources/Private/Templates/
+        # cat=plugin.tx_dummyextension/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:dummy_extension/Resources/Private/Partials/
+        # cat=plugin.tx_dummyextension/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:dummy_extension/Resources/Private/Layouts/
+    }
+
+    persistence {
+        # cat=plugin.tx_dummyextension//a; type=string; label=Default storage PID
+        storagePid =
+    }
+
+    settings {
+        # cat=plugin.tx_dummyextension//a; type=string; label=Default detail PID
+        detailPid =
+    }
+}

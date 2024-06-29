@@ -1,0 +1,24 @@
+plugin.tx_dummyextension {
+    view {
+        templateRootPaths {
+            10 = EXT:dummy_extension/Resources/Private/Templates/
+            20 = {$plugin.tx_dummyextension.view.templateRootPath}
+        }
+        partialRootPaths {
+            10 = EXT:dummy_extension/Resources/Private/Partials/
+            20 = {$plugin.tx_dummyextension.view.partialRootPath}
+        }
+        layoutRootPaths {
+            10 = EXT:dummy_extension/Resources/Private/Layouts/
+            20 = {$plugin.tx_dummyextension.view.layoutRootPath}
+        }
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_dummyextension.persistence.storagePid}
+    }
+
+    settings {
+        detailPid = {$plugin.tx_dummyextension.settings.detailPid}
+    }
+}

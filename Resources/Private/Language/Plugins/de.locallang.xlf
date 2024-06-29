@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+   <file source-language="en" target-language="de" datatype="plaintext" original="EXT:dummy_extension/Resources/Private/Language/Plugins/locallang.xlf" date="2023-12-13T11:55:00Z" product-name="dummy_extension">
+      <header/>
+      <body>
+          <trans-unit id="pluginname.label" resname="pluginname.label">
+              <source>xxx</source>
+              <target>xxx</target>
+          </trans-unit>
+          <trans-unit id="pluginname.description" resname="pluginname.description">
+              <source>xxx</source>
+              <target>xxx</target>
+          </trans-unit>
+      </body>
+   </file>
+</xliff>
