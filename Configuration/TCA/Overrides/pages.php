@@ -8,5 +8,5 @@ $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamel
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
     $extensionKey,
     'Configuration/TSConfig/RTE.tsconfig',
-    'EXT:' . $extensionName . ' :: Add textpart language plugin'
+    'EXT:' . $extensionName . ' :: Use RTE preset'
 );
