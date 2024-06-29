@@ -1,0 +1,9 @@
+RTE {
+    default.preset = ckeTextpartlanguage
+    config {
+        tt_content.bodytext {
+            preset = ckeTextpartlanguage
+            types.text.preset = ckeTextpartlanguage
+        }
+    }
+}
