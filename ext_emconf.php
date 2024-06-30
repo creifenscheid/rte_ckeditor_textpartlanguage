@@ -26,12 +26,12 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'CKE Textpart language',
-    'description' => 'This extension implements the text part language feature for CKEditor 5.',
+    'title' => 'CKE Text part language',
+    'description' => 'This extension implements the text part language feature for CKEditor 5',
     'category' => 'be',
     'author' => 'Christian Reifenscheid',
     'version' => '12.0.0',
-    'state' => 'alpha',
+    'state' => 'stable',
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.0-12.4.99',

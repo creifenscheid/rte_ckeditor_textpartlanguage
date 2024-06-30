@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This extension integrates the [CKEditor 5 text part language feature](https://ckeditor.com/docs/ckeditor5/latest/api/language.html) text part language feature into TYPO3’s CKEditor 5.
+This extension integrates the [CKEditor 5 text part language feature](https://ckeditor.com/docs/ckeditor5/latest/api/language.html) into TYPO3’s CKEditor 5.
 
 ## Usage
 
