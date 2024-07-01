@@ -6,36 +6,31 @@ This extension integrates the [CKEditor 5 text part language feature](https://ck
 
 ## Usage
 
-### Plugin import
-
-You can import the provided plugin configuration in your RTE configuration.
-
-```
-imports:
-  - { resource: "EXT:cke_textpartlanguage/Configuration/RTE/Plugin.yaml" }
-```
-
-### RTE preset
-
-You can use the Page TSconfig file `EXT:CkeTextpartlanguage :: Use RTE preset` to apply the provided RTE preset (as default preset and for tt_content.bodytext)
-
-Simply add the file in your root page properties.
-
-### Custom configuration
-
-You can configure the plugin in your RTE configuration file. 
-
-#### Example configuration
+1. Import the plugin in your RTE configuration.
 
 ```
 editor:
   config:
     importModules:
       - '@creifenscheid/cke-textpartlanguage/plugin.js'
+```
 
+2. Add the plugin to your toolbar
+
+```
+editor:
+  config:
     toolbar:
       items:
-        - textPartLanguage
+      - ...
+      - TextPartLanguage
+      - ...
+```
+
+3. Configure the languages you need
+```
+editor:
+  config:
     language:
       textPartLanguage:
         # EXAMPLE - {title: 'arabic', languageCode: 'ar', textDirection: 'rtl'}
