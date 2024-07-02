@@ -1,4 +1,4 @@
-## TYPO3 Extension `cke_textpartlanguage`
+## TYPO3 Extension `rte_ckeditor_textpartlanguage`
 
 ## Purpose
 
@@ -12,7 +12,7 @@ This extension integrates the [CKEditor 5 text part language feature](https://ck
 editor:
   config:
     importModules:
-      - '@creifenscheid/cke-textpartlanguage/plugin.js'
+      - '@creifenscheid/rte-ckeditor-textpartlanguage/plugin.js'
 ```
 
 2. Add the plugin to your toolbar
@@ -40,7 +40,7 @@ editor:
 
 ## Installation
 
-Install this extension via `composer req creifenscheid/cke-textpartlanguage` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/cke_textpartlanguage/). Then, activate the extension in the Extension Manager of your TYPO3 installation.
+Install this extension via `composer req creifenscheid/rte-ckeditor-textpartlanguage` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/rte_ckeditor_textpartlanguage/). Then, activate the extension in the Extension Manager of your TYPO3 installation.
 
 ### Support
 I don't want your money or anything else.

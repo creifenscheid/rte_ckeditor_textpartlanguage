@@ -1,6 +1,6 @@
 <?php
 
-$extensionKey = 'cke_textpartlanguage';
+$extensionKey = 'rte_ckeditor_textpartlanguage';
 
 return [
     'dependencies' => [

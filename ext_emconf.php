@@ -26,7 +26,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'CKE Text part language',
+    'title' => 'CKEditor 5 - Text part language',
     'description' => 'This extension implements the text part language feature for CKEditor 5',
     'category' => 'be',
     'author' => 'Christian Reifenscheid',
