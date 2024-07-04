@@ -1,5 +1,11 @@
-import * as Utils from"@ckeditor/ckeditor5-utils";
-
+/**
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ */
+/**
+ * @module language/utils
+ */
+import { getLanguageDirection } from '@ckeditor/ckeditor5-utils';
 /**
  * Returns the language attribute value in a human-readable text format:
  *
@@ -19,8 +25,8 @@ import * as Utils from"@ckeditor/ckeditor5-utils";
  * @param textDirection The language text direction. Automatically detected if omitted.
  */
 export function stringifyLanguageAttribute(languageCode, textDirection) {
-    textDirection = textDirection || Utils.getLanguageDirection(languageCode);
-    return `${languageCode}:${textDirection}`;
+  textDirection = textDirection || getLanguageDirection(languageCode);
+  return `${languageCode}:${textDirection}`;
 }
 /**
  * Retrieves language properties converted to attribute value by the
@@ -32,6 +38,6 @@ export function stringifyLanguageAttribute(languageCode, textDirection) {
  * * textDirection - The language text direction.
  */
 export function parseLanguageAttribute(str) {
-    const [languageCode, textDirection] = str.split(':');
-    return { languageCode, textDirection };
+  const [languageCode, textDirection] = str.split(':');
+  return { languageCode, textDirection };
 }
