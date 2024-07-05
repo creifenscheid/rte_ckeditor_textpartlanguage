@@ -2,12 +2,12 @@
  * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import { Command } from '@ckeditor/ckeditor5-core';
+import * as Core from '@ckeditor/ckeditor5-core';
 import { stringifyLanguageAttribute } from './utils.js';
 /**
  * The text part language command plugin.
  */
-export default class TextPartLanguageCommand extends Command {
+export default class TextPartLanguageCommand extends Core.Command {
   /**
    * @inheritDoc
    */
