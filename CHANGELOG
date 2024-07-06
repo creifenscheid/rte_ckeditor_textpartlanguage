@@ -1,2 +1,5 @@
+v12.1.0 +
+  * [FEATURE] Implements localizable labels for 'choose' and 'remove'
+
 v12.0.0 +
   * initial release
