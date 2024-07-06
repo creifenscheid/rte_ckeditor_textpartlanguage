@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf" date="2024-07-06T23:55:00Z" product-name="rte_ckeditor_textpartlanguage">
+        <header/>
+        <body>
+            <trans-unit id="plugin.choose" resname="plugin.choose">
+                <source>Choose language</source>
+            </trans-unit>
+            <trans-unit id="plugin.choose.accessibleLabel" resname="plugin.choose.accessibleLabel">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="plugin.remove" resname="plugin.remove">
+                <source>Remove language</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

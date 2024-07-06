@@ -27,8 +27,8 @@ export default class TextPartLanguageUI extends Plugin {
   init() {
     const editor = this.editor;
     const t = editor.t;
-    const defaultTitle = t('Choose language');
-    const accessibleLabel = t('Language');
+    const defaultTitle = editor.config.get('language.l10n.choose');
+    const accessibleLabel = editor.config.get('language.l10n.chooseAccessibleLabel');
     // Register UI component.
     editor.ui.componentFactory.add('textPartLanguage', locale => {
       const { definitions, titles } = this._getItemMetadata();
@@ -121,7 +121,7 @@ export default class TextPartLanguageUI extends Plugin {
     const languageCommand = editor.commands.get('textPartLanguage');
     const options = editor.config.get('language.textPartLanguage');
     const t = editor.locale.t;
-    const removeTitle = t('Remove language');
+    const removeTitle = editor.config.get('language.l10n.remove');
     // Item definition with false `languageCode` will behave as remove lang button.
     itemDefinitions.add({
       type: 'button',

@@ -1,5 +1,10 @@
 <?php
 
+namespace CReifenscheid\RteCkeditorTextpartlanguage\EventListener;
+
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+use TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -25,22 +30,23 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = [
-    'title' => 'CKEditor 5 - Text part language',
-    'description' => 'This extension implements the text part language feature for CKEditor 5',
-    'category' => 'be',
-    'author' => 'Christian Reifenscheid',
-    'version' => '12.1.0',
-    'state' => 'stable',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '12.4.0-12.4.99',
-            'rte_ckeditor' => '12.4.0-12.4.99',
-        ],
-    ],
-    'autoload' => [
-        'psr-4' => [
-            'CReifenscheid\\RteCkeditorTextpartlanguage\\' => 'Classes',
-        ],
-    ],
-];
+class RteConfigEnhancer
+{
+    /**
+     * @var string
+     */
+    private const L10N = 'LLL:EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf:';
+
+    public function __invoke(AfterPrepareConfigurationForEditorEvent $event): void
+    {
+        $configuration = $event->getConfiguration();
+
+        $configuration['language']['l10n'] = [
+            'choose' => LocalizationUtility::translate(self::L10N . 'plugin.choose'),
+            'chooseAccessibleLabel' => LocalizationUtility::translate(self::L10N . 'plugin.choose.accessibleLabel'),
+            'remove' => LocalizationUtility::translate(self::L10N . 'plugin.remove'),
+        ];
+
+        $event->setConfiguration($configuration);
+    }
+}
