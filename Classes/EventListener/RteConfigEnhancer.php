@@ -2,8 +2,8 @@
 
 namespace CReifenscheid\RteCkeditorTextpartlanguage\EventListener;
 
-use TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+use TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent;
 
 /***************************************************************
  *
@@ -32,21 +32,21 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 class RteConfigEnhancer
 {
-   /**
-    * @var string
-    */
-   private CONST L10N = 'LLL:EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf:';
+    /**
+     * @var string
+     */
+    private const L10N = 'LLL:EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf:';
 
-   public function __invoke(AfterPrepareConfigurationForEditorEvent $event): void
-   {
-      $configuration = $event->getConfiguration();
+    public function __invoke(AfterPrepareConfigurationForEditorEvent $event): void
+    {
+        $configuration = $event->getConfiguration();
 
-      $configuration['language']['l10n'] = [
-         'choose' => LocalizationUtility::translate(self::L10N . 'plugin.choose'),
-         'chooseAccessibleLabel' => LocalizationUtility::translate(self::L10N . 'plugin.choose.accessibleLabel'),
-         'remove' => LocalizationUtility::translate(self::L10N . 'plugin.remove'),
-      ];
-      
-      $event->setConfiguration($configuration);
-   }
+        $configuration['language']['l10n'] = [
+            'choose' => LocalizationUtility::translate(self::L10N . 'plugin.choose'),
+            'chooseAccessibleLabel' => LocalizationUtility::translate(self::L10N . 'plugin.choose.accessibleLabel'),
+            'remove' => LocalizationUtility::translate(self::L10N . 'plugin.remove'),
+        ];
+
+        $event->setConfiguration($configuration);
+    }
 }
