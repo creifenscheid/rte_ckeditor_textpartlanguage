@@ -10,6 +10,11 @@
 	"require-dev": {
 		"roave/security-advisories": "dev-latest"
 	},
+	"autoload" : {
+		"psr-4" : {
+			"CReifenscheid\\RteCkeditorTextpartlanguage\\" : "Classes/"
+		}
+	},
 	"replace": {
 		"typo3-ter/rte-ckeditor-textpartlanguage": "self.version"
 	},
@@ -17,8 +22,7 @@
 	"authors" : [{
 		"name" : "Christian Reifenscheid",
 		"email" : "dev@christian-reifenscheid.de"
-	}
-	],
+	}],
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "rte_ckeditor_textpartlanguage"

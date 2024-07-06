@@ -38,4 +38,9 @@ $EM_CONF[$_EXTKEY] = [
             'rte_ckeditor' => '12.4.0-12.4.99',
         ],
     ],
+    'autoload' => [
+        'psr-4' => [
+            'CReifenscheid\\RteCkeditorTextpartlanguage\\' => 'Classes',
+        ],
+    ],
 ];
