@@ -2,18 +2,51 @@
 
 namespace CReifenscheid\RteCkeditorTextpartlanguage\EventListener;
 
-use TYPO3\CMS\RteCKEditor\Form\Element\Event\BeforeGetExternalPluginsEvent;
-use TYPO3\CMS\RteCKEditor\Form\Element\Event\BeforePrepareConfigurationForEditorEvent;
+use TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+
+/***************************************************************
+ *
+ *  Copyright notice
+ *
+ *  (c) 2024 Christian Reifenscheid
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 class RteConfigEnhancer
 {
-   public function afterPrepareConfiguration(AfterPrepareConfigurationForEditorEvent $event): void
+   /**
+    * @var string
+    */
+   private CONST L10N = 'LLL:EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf:';
+
+   public function __invoke(AfterPrepareConfigurationForEditorEvent $event): void
    {
-      $data = $event->getData();
       $configuration = $event->getConfiguration();
-      $configuration['extraPlugins'][] = 'example_plugin';
-      $event->setConfiguration($configuration);
+
+      $configuration['language']['l10n'] = [
+         'choose' => LocalizationUtility::translate(self::L10N . 'plugin.choose'),
+         'chooseAccessibleLabel' => LocalizationUtility::translate(self::L10N . 'plugin.choose.accessibleLabel'),
+         'remove' => LocalizationUtility::translate(self::L10N . 'plugin.remove'),
+      ];
       
-      debug($data);
+      $event->setConfiguration($configuration);
    }
 }
