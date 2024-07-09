@@ -1,5 +1,6 @@
 v12.1.0 +
-  * [FEATURE] Implements localizable labels for 'choose' and 'remove'
+  * [FEATURE] - Implements localizable labels for 'choose' and 'remove'
+  * [BUGFIX] - Fixes setup-related JavaScript errors that may occur while loading the module
 
 v12.0.0 +
   * initial release
