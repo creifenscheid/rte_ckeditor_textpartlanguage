@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="plugin.choose" resname="plugin.choose" approved="yes">
         <source>Choose language</source>
-        <target state="final">Choose language</target>
+        <target state="final">Sprache auswählen</target>
       </trans-unit>
       <trans-unit id="plugin.choose.accessibleLabel" resname="plugin.choose.accessibleLabel" approved="yes">
         <source>Language</source>
