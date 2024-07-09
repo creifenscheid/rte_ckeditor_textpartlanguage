@@ -5,7 +5,7 @@
 /**
  * @module language/utils
  */
-import { getLanguageDirection } from '@ckeditor/ckeditor5-utils';
+import * as Utils from '@ckeditor/ckeditor5-utils';
 /**
  * Returns the language attribute value in a human-readable text format:
  *
@@ -25,7 +25,7 @@ import { getLanguageDirection } from '@ckeditor/ckeditor5-utils';
  * @param textDirection The language text direction. Automatically detected if omitted.
  */
 export function stringifyLanguageAttribute(languageCode, textDirection) {
-  textDirection = textDirection || getLanguageDirection(languageCode);
+  textDirection = textDirection || Utils.getLanguageDirection(languageCode);
   return `${languageCode}:${textDirection}`;
 }
 /**

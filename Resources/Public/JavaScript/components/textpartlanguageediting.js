@@ -2,7 +2,7 @@
  * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import * as Core from '@ckeditor/ckeditor5-core';
 import TextPartLanguageCommand from './textpartlanguagecommand.js';
 import { stringifyLanguageAttribute, parseLanguageAttribute } from './utils.js';
 /**
@@ -10,7 +10,7 @@ import { stringifyLanguageAttribute, parseLanguageAttribute } from './utils.js';
  *
  * Introduces the `'textPartLanguage'` command and the `'language'` model element attribute.
  */
-export default class TextPartLanguageEditing extends Plugin {
+export default class TextPartLanguageEditing extends Core.Plugin {
   /**
    * @inheritDoc
    */

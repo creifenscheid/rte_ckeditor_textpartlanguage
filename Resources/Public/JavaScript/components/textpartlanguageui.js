@@ -5,16 +5,16 @@
 /**
  * @module language/textpartlanguageui
  */
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { addListToDropdown, createDropdown, ListSeparatorView, MenuBarMenuView, MenuBarMenuListView, MenuBarMenuListItemView, MenuBarMenuListItemButtonView, ViewModel } from '@ckeditor/ckeditor5-ui';
-import { Collection } from '@ckeditor/ckeditor5-utils';
+import * as Core from '@ckeditor/ckeditor5-core';
+import * as Ui from '@ckeditor/ckeditor5-ui';
+import * as Utils from '@ckeditor/ckeditor5-utils';
 import { stringifyLanguageAttribute } from './utils.js';
 /**
  * The text part language UI plugin.
  *
  * It introduces the `'language'` dropdown.
  */
-export default class TextPartLanguageUI extends Plugin {
+export default class TextPartLanguageUI extends Core.Plugin {
   /**
    * @inheritDoc
    */
@@ -33,8 +33,8 @@ export default class TextPartLanguageUI extends Plugin {
     editor.ui.componentFactory.add('textPartLanguage', locale => {
       const { definitions, titles } = this._getItemMetadata();
       const languageCommand = editor.commands.get('textPartLanguage');
-      const dropdownView = createDropdown(locale);
-      addListToDropdown(dropdownView, definitions, {
+      const dropdownView = Ui.createDropdown(locale);
+      Ui.addListToDropdown(dropdownView, definitions, {
         ariaLabel: accessibleLabel,
         role: 'menu'
       });
@@ -77,22 +77,22 @@ export default class TextPartLanguageUI extends Plugin {
     editor.ui.componentFactory.add('menuBar:textPartLanguage', locale => {
       const { definitions } = this._getItemMetadata();
       const languageCommand = editor.commands.get('textPartLanguage');
-      const menuView = new MenuBarMenuView(locale);
+      const menuView = new Ui.MenuBarMenuView(locale);
       menuView.buttonView.set({
         label: accessibleLabel
       });
-      const listView = new MenuBarMenuListView(locale);
+      const listView = new Ui.MenuBarMenuListView(locale);
       listView.set({
         ariaLabel: t('Language'),
         role: 'menu'
       });
       for (const definition of definitions) {
         if (definition.type != 'button') {
-          listView.items.add(new ListSeparatorView(locale));
+          listView.items.add(new Ui.ListSeparatorView(locale));
           continue;
         }
-        const listItemView = new MenuBarMenuListItemView(locale, menuView);
-        const buttonView = new MenuBarMenuListItemButtonView(locale);
+        const listItemView = new Ui.MenuBarMenuListItemView(locale, menuView);
+        const buttonView = new Ui.MenuBarMenuListItemButtonView(locale);
         buttonView.bind(...Object.keys(definition.model)).to(definition.model);
         buttonView.bind('ariaChecked').to(buttonView, 'isOn');
         buttonView.delegate('execute').to(menuView);
@@ -116,7 +116,7 @@ export default class TextPartLanguageUI extends Plugin {
    */
   _getItemMetadata() {
     const editor = this.editor;
-    const itemDefinitions = new Collection();
+    const itemDefinitions = new Utils.Collection();
     const titles = {};
     const languageCommand = editor.commands.get('textPartLanguage');
     const options = editor.config.get('language.textPartLanguage');
@@ -125,7 +125,7 @@ export default class TextPartLanguageUI extends Plugin {
     // Item definition with false `languageCode` will behave as remove lang button.
     itemDefinitions.add({
       type: 'button',
-      model: new ViewModel({
+      model: new Ui.ViewModel({
         label: removeTitle,
         languageCode: false,
         withText: true
@@ -137,7 +137,7 @@ export default class TextPartLanguageUI extends Plugin {
     for (const option of options) {
       const def = {
         type: 'button',
-        model: new ViewModel({
+        model: new Ui.ViewModel({
           label: option.title,
           languageCode: option.languageCode,
           role: 'menuitemradio',
