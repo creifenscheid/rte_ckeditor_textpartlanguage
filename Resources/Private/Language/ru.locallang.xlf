@@ -5,15 +5,15 @@
     <body>
       <trans-unit id="plugin.choose" resname="plugin.choose">
         <source>Choose language</source>
-        <target state="needs-translation">Choose language</target>
+        <target state="translated">Выберите язык</target>
       </trans-unit>
       <trans-unit id="plugin.choose.accessibleLabel" resname="plugin.choose.accessibleLabel">
         <source>Language</source>
-        <target state="needs-translation">Language</target>
+        <target state="translated">Язык</target>
       </trans-unit>
       <trans-unit id="plugin.remove" resname="plugin.remove">
         <source>Remove language</source>
-        <target state="needs-translation">Remove language</target>
+        <target state="translated">Удалить язык</target>
       </trans-unit>
     </body>
   </file>
