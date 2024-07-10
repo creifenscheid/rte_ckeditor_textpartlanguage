@@ -3,17 +3,17 @@
   <file source-language="en" datatype="plaintext" original="EXT:rte_ckeditor_textpartlanguage/Resources/Private/Language/locallang.xlf" date="2024-07-06T23:55:00Z" product-name="rte_ckeditor_textpartlanguage" target-language="uk">
     <header/>
     <body>
-      <trans-unit id="plugin.choose" resname="plugin.choose">
+      <trans-unit id="plugin.choose" resname="plugin.choose" approved="yes">
         <source>Choose language</source>
-        <target state="needs-translation">Choose language</target>
+        <target state="final">Виберіть мову</target>
       </trans-unit>
-      <trans-unit id="plugin.choose.accessibleLabel" resname="plugin.choose.accessibleLabel">
+      <trans-unit id="plugin.choose.accessibleLabel" resname="plugin.choose.accessibleLabel" approved="yes">
         <source>Language</source>
-        <target state="needs-translation">Language</target>
+        <target state="final">Мова</target>
       </trans-unit>
-      <trans-unit id="plugin.remove" resname="plugin.remove">
+      <trans-unit id="plugin.remove" resname="plugin.remove" approved="yes">
         <source>Remove language</source>
-        <target state="needs-translation">Remove language</target>
+        <target state="final">Видалити мову</target>
       </trans-unit>
     </body>
   </file>
