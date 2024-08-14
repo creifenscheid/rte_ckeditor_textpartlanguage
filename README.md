@@ -1,5 +1,3 @@
-[![Latest Stable Version](http://poser.pugx.org/creifenscheid/rte-ckeditor-textpartlanguage/v?style=for-the-badge)](https://packagist.org/packages/creifenscheid/rte-ckeditor-textpartlanguage) [![Total Downloads](http://poser.pugx.org/creifenscheid/rte-ckeditor-textpartlanguage/downloads?style=for-the-badge)](https://packagist.org/packages/creifenscheid/rte-ckeditor-textpartlanguage) [![License](http://poser.pugx.org/creifenscheid/rte-ckeditor-textpartlanguage/license?style=for-the-badge)](https://packagist.org/packages/creifenscheid/rte-ckeditor-textpartlanguage)
-
 # TYPO3 Extension `rte_ckeditor_textpartlanguage`
 
 ## Purpose
