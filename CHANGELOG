@@ -1,3 +1,6 @@
+v13.2.0 +
+  * [TASK] - Add TYPO3 13 compatibility
+
 v12.1.0 +
   * [FEATURE] - Implements localizable labels for 'choose' and 'remove'
   * [BUGFIX] - Fixes setup-related JavaScript errors that may occur while loading the module

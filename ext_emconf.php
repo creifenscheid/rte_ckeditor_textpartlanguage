@@ -30,12 +30,12 @@ $EM_CONF[$_EXTKEY] = [
     'description' => 'This extension implements the text part language feature for CKEditor 5',
     'category' => 'be',
     'author' => 'Christian Reifenscheid',
-    'version' => '12.1.0',
+    'version' => '13.0.0',
     'state' => 'stable',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.4.0-12.4.99',
-            'rte_ckeditor' => '12.4.0-12.4.99',
+            'typo3' => '13.2.0-13.2.99',
+            'rte_ckeditor' => '13.2.0-13.2.99',
         ],
     ],
     'autoload' => [
