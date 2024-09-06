@@ -1,5 +1,5 @@
-v13.2.0 +
-  * [TASK] - Add TYPO3 13 compatibility
+v12.2.0 +
+  * [FEATURE] - Set max version for TYPO3 core
 
 v12.1.0 +
   * [FEATURE] - Implements localizable labels for 'choose' and 'remove'
