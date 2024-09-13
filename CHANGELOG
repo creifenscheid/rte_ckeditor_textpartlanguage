@@ -1,5 +1,5 @@
-v12.2.0 +
-  * [FEATURE] - Set max version for TYPO3 core
+v99.99.99 +
+  * [TASK] - change extension state to "obsolete"
 
 v12.1.0 +
   * [FEATURE] - Implements localizable labels for 'choose' and 'remove'
